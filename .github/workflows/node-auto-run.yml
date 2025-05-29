@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:  # Bisa dijalankan manual juga
+  workflow_dispatch:  # Agar bisa dijalankan manual juga dari GitHub UI
 
 jobs:
   run-node:
@@ -22,8 +22,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run server.js
-        run: node server.js
-
-      - name: Run websocket-server.js
-        run: node websocket-server.js
+      - name: Run script
+        run: node server.js  # Ganti dengan file utama Anda
